@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.swp
+
+# Environment
+.venv/
+.env
+venv/
+
+# Database and uploads
+instance/
+uploads/
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs and cache
+*.log
+*.cache
