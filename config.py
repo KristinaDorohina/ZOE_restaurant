@@ -3,6 +3,8 @@ import os
 import secrets
 from pathlib import Path
 
+from flask_uploads import UploadSet, IMAGES, configure_uploads
+
 
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY', secrets.token_hex(32))
@@ -13,6 +15,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     UPLOAD_FOLDER = BASE_DIR / 'uploads'
+    photos = UploadSet('photos', IMAGES)
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB лимит
 
